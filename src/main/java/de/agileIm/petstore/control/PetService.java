@@ -41,10 +41,10 @@ public class PetService {
 
 
     public Pet updatePetById(String petId, Pet pet) {
-        if (pet.getName().equals("KeinTierName")) {
-            throw new UnexpectedErrorException("Es dürfen keine Tiere mit dem Name 'KeinTierName' angelegt werden");
-        }
         Long id = Long.parseLong(petId);
+        if (!pet.getId().equals(id)) {
+            throw new UnexpectedErrorException("Die Id vom Pet muss mit mit der angegebenen PathId übereinstimmen");
+        }
         pet.setId(id);
         return petPersistence.saveOrUpdatePet(pet);
     }
