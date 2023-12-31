@@ -22,6 +22,7 @@ Ein Durchgreifen zwischen den Schichten ist nicht vorgesehen.
 * Daten werden nicht persistiert, nur In-Memory gehalten, sind also nach dem Neustart wieder weg
 * Unit-Testabdeckung für alle Klassen vorhanden, evtl. könnten noch mehr Tests für Fehlerhandling geschrieben werden
 * 1 Integration-Test für Happy-Path mittels SpringBootTest
+* URL des Backends: http://localhost:8080
 
 
 ## Starten des Projektes
